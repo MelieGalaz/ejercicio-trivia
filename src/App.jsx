@@ -4,7 +4,7 @@ import { Inicio } from "./layuot/inicio/Inicio.jsx";
 import { preguntasTrivia } from "./preguntas.js";
 import { useState } from "react";
 import { GlobalStyles } from "@mui/material";
-import backgroundImage from "./assets/endless-constellation.svg";
+import backgroundImage from "./assets/endless-constellation.png";
 export const App = () => {
   const [contador, setContador] = useState(0);
   const [indice, setIndice] = useState(0);
