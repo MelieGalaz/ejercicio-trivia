@@ -26,18 +26,19 @@ export const Card = ({
   const { pregunta, opciones, respuestaCorrecta, explicación } =
     preguntasTrivia;
   const [respuesta, setRespuesta] = useState("");
-  const [alerta, setAlerta] = useState(0);
+  const [alerta, setAlerta] = useState(false);
   const [mensaje, setMensaje] = useState("");
   const [open, setOpen] = useState(false);
   const [explicacion, setExplicacion] = useState("");
+
   const handleRespuesta = (e) => {
     setRespuesta(e.target.value);
-    setAlerta(0);
+    setAlerta(false);
   };
 
   const handleCheckAnswer = () => {
     if (respuesta === "") {
-      setAlerta(1);
+      setAlerta(true);
     } else {
       if (respuestaCorrecta === respuesta) {
         setMensaje("CORRECTA ");
@@ -51,23 +52,16 @@ export const Card = ({
       }
     }
   };
+
   const style = {
     position: "absolute",
-
     top: "50%",
-
     left: "50%",
-
     transform: "translate(-50%, -50%)",
-
-    width: "60%",
-
+    width: "75%",
     bgcolor: "background.paper",
-
     border: "2px solid #000",
-
     boxShadow: 24,
-
     p: 4,
     textAlign: "center",
   };
@@ -79,14 +73,15 @@ export const Card = ({
     } else {
       setIndice(indice + 1);
     }
+    setRespuesta("");
   };
-  // const handleNextQuestion = () => {};
 
   return (
     <Container
       sx={{
         backgroundColor: "#e3f1ff",
         width: "80%",
+
         minHeight: 160,
         borderRadius: 2,
         boxShadow: 1,
@@ -94,6 +89,7 @@ export const Card = ({
         padding: 2,
         display: "flex",
         flexDirection: "column",
+        gap: 2,
       }}
     >
       <Typography
@@ -109,44 +105,33 @@ export const Card = ({
         </FormLabel>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
-          defaultValue="female"
           name="radio-buttons-group"
+          value={respuesta}
+          onChange={handleRespuesta}
         >
-          <FormControlLabel
-            value={opciones[0]}
-            control={<Radio />}
-            label={opciones[0]}
-            onClick={handleRespuesta}
-          />
-          <FormControlLabel
-            value={opciones[1]}
-            control={<Radio />}
-            label={opciones[1]}
-            onClick={handleRespuesta}
-          />
-          <FormControlLabel
-            value={opciones[2]}
-            control={<Radio />}
-            label={opciones[2]}
-            onClick={handleRespuesta}
-          />
-          <FormControlLabel
-            value={opciones[3]}
-            control={<Radio />}
-            label={opciones[3]}
-            onClick={handleRespuesta}
-          />
+          {opciones.map((opcion, index) => (
+            <FormControlLabel
+              key={index}
+              value={opcion}
+              control={<Radio />}
+              label={opcion}
+            />
+          ))}
         </RadioGroup>
       </FormControl>
       <Button
         variant="contained"
         onClick={handleCheckAnswer}
-        sx={{ width: "50%", margin: "auto" }}
+        sx={{
+          width: "50%",
+          margin: "auto",
+          fontSize: 12,
+        }}
       >
         Enviar Respuesta
       </Button>
 
-      {alerta === 1 && <Alert severity="warning">Selecciona una opción</Alert>}
+      {alerta && <Alert severity="warning">Selecciona una opción</Alert>}
 
       <div>
         <Modal

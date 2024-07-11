@@ -34,7 +34,7 @@ export const App = () => {
           },
         }}
       />
-      ;{vista === 0 && <Inicio setVista={setVista} />}
+      {vista === 0 && <Inicio setVista={setVista} />}
       {vista === 1 && (
         <Card
           preguntasTrivia={preguntasTrivia[indice]}

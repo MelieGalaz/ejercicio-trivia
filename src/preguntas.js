@@ -43,6 +43,6 @@ export const preguntasTrivia = [
     opciones: ["Sídney", "Melbourne", "Canberra", "Brisbane"],
     respuestaCorrecta: "Canberra",
     explicación:
-      "Canberra que significa 'lugar de reunión') es la capital de Australia, con una población 386,000 habitantes.",
+      "Canberra que significa 'lugar de reunión' es la capital de Australia, con una población 386,000 habitantes.",
   },
 ];

@@ -4,7 +4,8 @@ export const ResultCard = ({ contador, setVista, setIndice, setContador }) => {
     <Box
       sx={{
         backgroundColor: "#e3f1ff",
-        width: "60%",
+        width: "80%",
+
         minHeight: 160,
         borderRadius: 2,
         boxShadow: 1,
@@ -14,12 +15,14 @@ export const ResultCard = ({ contador, setVista, setIndice, setContador }) => {
         flexDirection: "column",
         textAlign: "center",
         alignItems: "center",
+        margin: "auto",
+        gap: 2,
       }}
     >
-      <Typography variant="h3">¡Gracias por participar!</Typography>
+      <Typography sx={{ fontSize: 35 }}>¡Gracias por participar!</Typography>
 
       <Typography sx={{ fontSize: 25 }}>
-        Tu resultado final es : {contador}{" "}
+        Tu resultado final es : {contador}
       </Typography>
 
       <Typography>¿Quieres intentarlo de nuevo?</Typography>
