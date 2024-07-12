@@ -64,6 +64,7 @@ export const Card = ({
     boxShadow: 24,
     p: 4,
     textAlign: "center",
+    maxWidth: "800px",
   };
 
   const handleClose = () => {
