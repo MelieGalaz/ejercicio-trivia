@@ -1,32 +1,51 @@
-## Consigna: 
+# Trivia
 
-_Ana es una maestra que quiere ayudar a sus estudiantes a aprender más sobre cultura general de una manera divertida y original. Para ello, necesita una herramienta que permita a los estudiantes responder a preguntas de trivia y ver sus resultados en tiempo real. Podremos ayudar a Ana a lograr que sus estudiantes se interesen en su materia?_
+Esta app [Triva](https://triviaada.netlify.app) es un juego de preguntas donde el usuario por cada pregunta correcta suma un punto.
 
-## Requisitos:
-### Pantalla de Inicio:
+## La vista segun el tamaño:
 
-* Una pantalla inicial con un botón para empezar el juego.
+Modo celular:
+![vista desde celular](./src/assets/readm1.PNG)
 
+Modo desktop:
 
-### Preguntas de Trivia:
+![vista desde desktop](./src/assets/readm2.PNG)
 
-* Mostrar una pregunta a la vez con cuatro opciones de respuesta.
-* Permitir al usuario seleccionar una respuesta.
-* Mostrar feedback inmediato sobre si la respuesta es correcta o incorrecta.
-* Pasar a la siguiente pregunta después de mostrar el feedback.
+## Modo de uso:
 
+- Una pantalla inicial con un botón para empezar el juego, allí se ve un botón de comienza el juego al tocar lleva al usuario a la primera pregunta de la trivia.
+
+![preguntas](./src/assets/readm3.PNG)
+
+- Muestra una pregunta a la vez con cuatro opciones de respuesta.
+- Permite al usuario seleccionar una respuesta.
+- Si se toca el botón de enviar respuesta sin tocar una opción saldrá el aviso de seleciona una opción
+
+![preguntas](./src/assets/readm4.PNG)
+
+- Mustra feedback inmediato sobre si la respuesta es correcta o incorrecta.
+
+![preguntas](./src/assets/readm5.PNG)
+
+![preguntas](./src/assets/readm6.PNG)
+
+- Pasa a la siguiente pregunta después de mostrar el feedback y tocar el siguiente pregunta.
 
 ### Puntuación Final:
 
-* Mostrar la puntuación total obtenida al final del juego.
+- Mustra la puntuación total obtenida al final del juego.
+- Además permite volver a intentarlo si asi se desea
 
+![puntuación final](./src/assets/readm7.PNG)
 
+## Construido Con:
 
-## Pistas:
+Las tecnologías que se utilizo para construir este proyecto:
 
-* Utilizar useState para manejar el estado del juego, incluyendo las preguntas, la pregunta actual, las respuestas del usuario y la puntuación.
-* Usar react-hook-form para manejar la selección de respuestas (aunque para este caso simple, puede manejarse con useState).
-* Aprovechar los componentes de MaterialUI como Button, Typography, Radio, RadioGroup, FormControl, FormControlLabel, y Card para la UI.
-* En el repositorio ya encontrarán un archivo js con algunas preguntas cargadas. Pueden modificar la estructura de la información a su gusto para realizar la funcinoalidad. 
+- JavaScript
+- React
+- Material-UI (MUI)
 
-Buena suerte! 💖
+## Link al deploy
+
+https://triviaada.netlify.app
