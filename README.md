@@ -23,7 +23,7 @@ Modo desktop:
 
 ![preguntas](./src/assets/readm4.PNG)
 
-- Mustra feedback inmediato sobre si la respuesta es correcta o incorrecta.
+- Muestra feedback inmediato sobre si la respuesta es correcta o incorrecta.
 
 ![preguntas](./src/assets/readm5.PNG)
 
